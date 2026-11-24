@@ -1,0 +1,211 @@
+/* ===== Cabeçalho de cada página ===== */
+.pagina-topo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.pagina-titulo {
+  font-size: 1.375rem;
+}
+.pagina-subtitulo {
+  margin-top: 4px;
+  color: var(--texto-secundario);
+}
+.pagina-subtitulo strong {
+  color: var(--marinho);
+}
+.pagina-acoes {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.seletor-periodo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.seletor-periodo select,
+.seletor-periodo input {
+  width: auto;
+}
+
+/* ===== Visão geral ===== */
+.cartoes-resumo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.indicador {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-left: 5px solid var(--azul);
+}
+.indicador-receita {
+  border-left-color: var(--verde);
+}
+.indicador-despesa {
+  border-left-color: var(--vermelho);
+}
+.indicador-saldo {
+  border-left-color: var(--azul);
+}
+.indicador-titulo {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--texto-secundario);
+}
+.indicador-valor {
+  font-size: 2rem;
+  line-height: 1.2;
+  color: var(--marinho);
+  font-variant-numeric: tabular-nums;
+}
+.indicador-receita .indicador-valor {
+  color: var(--verde);
+}
+.indicador-despesa .indicador-valor {
+  color: var(--vermelho);
+}
+.indicador-periodo {
+  font-size: 0.8125rem;
+  color: var(--texto-secundario);
+}
+
+.grade-visao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Barras horizontais de despesas por categoria */
+.barras {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.barra-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.barra-nome {
+  font-weight: 600;
+  color: var(--marinho);
+}
+.barra-valor {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.barra-valor small {
+  font-weight: 500;
+  color: var(--texto-secundario);
+}
+.barra-trilho {
+  height: 12px;
+  overflow: hidden;
+  background: var(--creme);
+  border-radius: 999px;
+}
+.barra-preenchimento {
+  height: 100%;
+  background: var(--azul);
+  border-radius: 999px;
+}
+
+/* Últimas movimentações */
+.lista-recentes {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.recente-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--borda-neutra);
+}
+.recente-item:last-child {
+  border-bottom: none;
+}
+.recente-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.recente-info strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.recente-info span {
+  font-size: 0.8125rem;
+  color: var(--texto-secundario);
+}
+
+/* ===== Movimentações ===== */
+.filtros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+  align-items: end;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+}
+.filtros .campo {
+  margin-bottom: 8px;
+}
+.filtros-acao {
+  margin-bottom: 8px;
+}
+
+.cartao-tabela {
+  padding: 0;
+  overflow: hidden;
+}
+.cartao-tabela > .cartao-cabecalho {
+  padding: 18px 24px 0;
+}
+.cartao-tabela > .estado-vazio {
+  margin: 0 24px 24px;
+}
+.cartao-tabela > .alerta {
+  margin: 0 24px 24px;
+}
+
+@media (max-width: 1100px) {
+  .grade-visao {
+    grid-template-columns: 1fr;
+  }
+  .filtros {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .cartoes-resumo {
+    grid-template-columns: 1fr;
+  }
+  .formulario-grade {
+    grid-template-columns: 1fr;
+  }
+}

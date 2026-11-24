@@ -1,0 +1,19 @@
+# Dependências e build
+node_modules
+dist
+
+# Credenciais reais (NUNCA envie para o GitHub)
+.env
+.env.local
+.env.*.local
+
+# Logs e arquivos do sistema
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
